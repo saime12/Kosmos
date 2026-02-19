@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>kosmos</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        .raam {
+            position: absolute;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden; 
+            background: #020024;
+            background: linear-gradient(178deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 65%, rgba(0,212,255,1) 100%);
+        }
+
+        .star {
+            font-size: 44px;
+            color: white;
+            position: absolute;
+            line-height: 0.5;
+            filter: blur(1px);
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        .star:hover {
+            transform: rotate(360deg);
+        }
+
+        #star2:hover {
+            font-size: 100px;
+        }
+
+        #star1 {
+            top: 100px; 
+            left: 150px;
+            font-size: 100px;
+            
+        }
+
+        #star1:hover {
+            filter: blur(3px);
+        }
+        
+        #star2 {
+            top: 500px; 
+            left: 1600px;
+            font-size: 50px;
+         }
+
+        #star3:hover {
+            font-size: 100px;
+        }
+
+        #star3 {
+            top: 500px; 
+            left: 800px;
+            font-size: 30px;
+         }
+        #star4 {
+            top: 150px; 
+            left: 1000px;
+            font-size: 100px;
+        }
+        #star5 {
+            top: 600px; 
+            left: 300px;
+            font-size: 50px;
+         }
+        #star6 {
+            top: 900px; 
+            left: 1200px;
+            font-size: 50px;
+        }
+
+        #star7 {
+            top: 200px; 
+            left: 1600px;
+            font-size: 150px;
+        }
+        #star8 {
+            top: 200px;
+            left: 600px;
+            font-size: 150px;
+        }
+        #star9 {
+            top: 450px;
+            left: 100px;
+            font-size: 100px;
+        }
+
+        #star10 {
+            top: 50px; 
+            left: 1400px;
+            font-size: 100px;
+        }
+
+        .star:hover:not(#star6) {
+            transform: rotate(360deg);
+        }
+
+        @keyframes rocketGlow {
+        0% {
+            text-shadow:
+                        0 0 5px red,
+                        0 0 10px orange,
+                        0 0 20px yellow;
+        }
+        50% {
+            text-shadow:
+                        0 0 15px red,
+                        0 0 30px orange,
+                        0 0 50px yellow;
+            }
+        100% {
+            text-shadow:
+                        0 0 5px red,
+                        0 0 10px orange,
+                        0 0 20px yellow;
+            }
+        }
+
+        .star:hover {
+            animation: rocketGlow 1s infinite;
+        }
+
+        @keyframes moveRocket {
+            0%   { transform: translate(0, 0); }
+            100% { transform: translate(200px, -300px); }
+        }
+
+        #star6:hover {
+            animation: rocketGlow 3s infinite, moveRocket 2s infinite;
+        }
+
+        .dot {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+        0% {
+            opacity: 0.2;
+            box-shadow: 0 0 0px white;
+        }
+        50% {
+            opacity: 1;
+            box-shadow: 0 0 8px 2px white;
+        }
+        100% {
+            opacity: 0.2;
+            box-shadow: 0 0 0px white;
+        }
+    }
+  
+    </style>
+</head>
+<body>
+    <div class="raam">
+        <div class="dot" style="top:100px; left:300px; animation-duration: 1.5s;"></div>
+        <div class="dot" style="top:200px; left:700px; animation-duration: 2s;"></div>
+        <div class="dot" style="top:350px; left:1200px; animation-duration: 2.5s;"></div>
+        <div class="dot" style="top:500px; left:400px; animation-duration: 1.8s;"></div>
+        <div class="dot" style="top:650px; left:900px; animation-duration: 2.2s;"></div>
+        <div class="dot" style="top:800px; left:1500px; animation-duration: 2.7s;"></div>
+        <div class="dot" style="top:150px; left:1600px; animation-duration: 1.6s;"></div>
+        <div class="dot" style="top:450px; left:50px; animation-duration: 2.3s;"></div>
+        <div class="dot" style="top:900px; left:600px; animation-duration: 2s;"></div>
+        <div class="dot" style="top:250px; left:1100px; animation-duration: 2.1s;"></div>
+
+        <h1>a</h1>
+        <span class="star" class="stars" id="star1">⭐</span>
+        <span class="star" class="stars" id="star2">🌟</span>
+        <span class="star" class="stars" id="star3">🌟</span>
+        <span class="star" class="stars" id="star4">✨</span>
+        <span class="star" class="stars" id="star5">💫</span>
+        <span class="star" id="star6">🚀</span>
+        <span class="star" id="star7">🌕</span>
+        <span class="star" id="star8">🪐</span>
+        <span class="star" id="star9">🌎</span>
+        <span class="star" class="stars" id="star10">⭐</span>
+    </div>
+</body>
+</html>
